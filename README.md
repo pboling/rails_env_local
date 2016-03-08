@@ -2,6 +2,10 @@
 
 `rails_env_local`, where a rails environment for local development can be anything it desires.  Even a `butterfly`.  Tell your DevOps friends.
 
+[Rails Guides](http://guides.rubyonrails.org/initialization.html) has more information on the Rails initialization routines.  You can easily accomplish what this gem does in a few lines of code.
+
+... But are you going to write specs for code in your `config/boot.rb` file?  Really?
+
 ## Installation
 
 Add this line to your application's Gemfile:
