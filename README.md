@@ -6,6 +6,23 @@
 
 ... But are you going to write specs for code in your `config/boot.rb` file?  Really?
 
+
+| Project                 |  FlagShihTzu      |
+|------------------------ | ----------------- |
+| gem name                |  rails_env_local    |
+| license                 |  MIT              |
+| version                 |  [![Gem Version](https://badge.fury.io/rb/rails_env_local.png)](http://badge.fury.io/rb/rails_env_local) |
+| dependencies            |  [![Dependency Status](https://gemnasium.com/pboling/rails_env_local.png)](https://gemnasium.com/pboling/rails_env_local) |
+| code quality            |  [![Code Climate](https://codeclimate.com/github/pboling/rails_env_local.png)](https://codeclimate.com/github/pboling/rails_env_local) |
+| inline documenation     |  [![Inline docs](http://inch-ci.org/github/pboling/rails_env_local.png)](http://inch-ci.org/github/pboling/rails_env_local) |
+| continuous integration  |  [![Build Status](https://secure.travis-ci.org/pboling/rails_env_local.png?branch=master)](https://travis-ci.org/pboling/rails_env_local) |
+| test coverage           |  [![Coverage Status](https://coveralls.io/repos/pboling/rails_env_local/badge.png)](https://coveralls.io/r/pboling/rails_env_local) |
+| homepage                |  [on github](https://github.com/pboling/rails_env_local) |
+| documentation           |  [on rdoc.info](http://rdoc.info/github/pboling/rails_env_local/frames) |
+| author                  |  [Peter Boling](https://coderbits.com/pboling) |
+| Spread ~♡ⓛⓞⓥⓔ♡~      |  [![Endorse Me](https://api.coderwall.com/pboling/endorsecount.png)](http://coderwall.com/pboling) |
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -50,32 +67,36 @@ This gem is tested with Ruby 2.2-latest and 2.3-latest.  It should work with any
   * Default: `"local"`
   * Effect: Sets the Rails environment (`Rails.env`) to the given string
   * Example:
-    
-        RailsEnvLocal.set_local_environment(environment: "panda")
+```ruby
+    RailsEnvLocal.set_local_environment(environment: "panda")
+```
 
 #### `verbose`
   * Type: boolean
   * Default: `false`
   * Effect: Prints the environment to `STDOUT` as it is being set
   * Example:
-
-        RailsEnvLocal.set_local_environment(verbose: true)
+```ruby
+    RailsEnvLocal.set_local_environment(verbose: true)
+```
 
 #### `set_rack_env`
   * Type: boolean
   * Default: `true`
   * Effect: In addition to setting `Rails.env`, will set `ENV["RAILS_ENV"]` to match `Rails.env`
   * Example:
-
-        RailsEnvLocal.set_local_environment(set_rack_env: false)
+```ruby
+    RailsEnvLocal.set_local_environment(set_rack_env: false)
+```
 
 #### `set_rails_env`
   * Type: boolean
   * Default: `true`
   * Effect: In addition to setting `Rails.env`, will set `ENV["RACK_ENV"]` to match `Rails.env`
   * Example:
-
-        RailsEnvLocal.set_local_environment(set_rails_env: false)
+```ruby
+    RailsEnvLocal.set_local_environment(set_rails_env: false)
+```
 
 ## Development
 
@@ -125,4 +146,4 @@ spec.add_dependency 'rails_env_local', '~> 0.1'
 [pvc]: http://docs.rubygems.org/read/chapter/16#page74
 [railsbling]: http://www.railsbling.com
 [mygithub]: http://github.com/pboling
-[contributors]: https://github.com/pboling/flag_shih_tzu/contributors
+[contributors]: https://github.com/pboling/rails_env_local/contributors
