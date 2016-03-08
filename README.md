@@ -16,11 +16,10 @@
 | code quality            |  [![Code Climate](https://codeclimate.com/github/pboling/rails_env_local.png)](https://codeclimate.com/github/pboling/rails_env_local) |
 | inline documenation     |  [![Inline docs](http://inch-ci.org/github/pboling/rails_env_local.png)](http://inch-ci.org/github/pboling/rails_env_local) |
 | continuous integration  |  [![Build Status](https://secure.travis-ci.org/pboling/rails_env_local.png?branch=master)](https://travis-ci.org/pboling/rails_env_local) |
-| test coverage           |  [![Coverage Status](https://coveralls.io/repos/pboling/rails_env_local/badge.png)](https://coveralls.io/r/pboling/rails_env_local) |
 | homepage                |  [on github](https://github.com/pboling/rails_env_local) |
 | documentation           |  [on rdoc.info](http://rdoc.info/github/pboling/rails_env_local/frames) |
 | author                  |  [Peter Boling](https://coderbits.com/pboling) |
-| Spread ~♡ⓛⓞⓥⓔ♡~      |  [![Endorse Me](https://api.coderwall.com/pboling/endorsecount.png)](http://coderwall.com/pboling) |
+| Spread ~♡ⓛⓞⓥⓔ♡~      |  always |
 
 
 ## Installation
