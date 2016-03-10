@@ -111,6 +111,15 @@ A: Yeah, pretty much.  Name your deployed environment "dev", "develop", or "anyt
     RailsEnvLocal.set_local_environment(set_rails_env: false)
 ```
 
+#### `force`
+  * Type: boolean
+  * Default: `false`
+  * Effect: Setting `Rails.env`, no matter what, and `RAILS_ENV` / `RACK_ENV` variables according to other options given.
+  * Example:
+```ruby
+    RailsEnvLocal.set_local_environment(force: true)
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run a single suite of tests, or run `wwtd` to run all specs like TravisCI would. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

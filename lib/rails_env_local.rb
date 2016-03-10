@@ -1,5 +1,6 @@
 require "rails_env_local/version"
 require "rails"
+require "rails_env_local/rails_env"
 
 # Usage:
 #
@@ -33,6 +34,10 @@ require "rails"
 #   set_rails_env: true or false (default is true)
 #     Effect: will additionally set RACK_ENV to match Rails.env
 #     Example: RailsEnvLocal.set_local_environment(set_rails_env: false)
+#
+#   force: true or false (default is false)
+#     Effect: will set Rails.env to environment no matter what.
+#     Example: RailsEnvLocal.set_local_environment(force: true)
 
 module RailsEnvLocal
   ORIGINAL_RAILS_DEVELOPMENT_ENVIRONMENT = "development"
@@ -41,12 +46,31 @@ module RailsEnvLocal
   #     the environment name.  For one example of this see: https://github.com/bkeepers/dotenv#multiple-rails-environments
   ALTERNATE_RAILS_DEVELOPMENT_ENVIRONMENT = "localdev"
   def self.set_local_environment(environment: ALTERNATE_RAILS_DEVELOPMENT_ENVIRONMENT, **options)
-    if ENV["RAILS_ENV"] == ORIGINAL_RAILS_DEVELOPMENT_ENVIRONMENT || Rails.env == ORIGINAL_RAILS_DEVELOPMENT_ENVIRONMENT
+    options = {set_rails_env: true, set_rack_env: true, verbose: false, force: false}.merge(options)
+    if was_development? || was_default? || options[:force]
       Rails.env = environment
-      options = {set_rails_env: true, set_rack_env: true, verbose: false}.merge(options)
       ENV["RAILS_ENV"] = Rails.env if options[:set_rails_env]
       ENV["RACK_ENV"] = Rails.env if options[:set_rack_env]
       puts "switching to custom local development environment: #{environment}" if options[:verbose]
+    elsif [ENV["RAILS_ENV"], ENV["RACK_ENV"], Rails.env].compact.uniq.length > 1
+      msg =  %(ENV["RAILS_ENV"], ENV["RACK_ENV"] and Rails.env are out of sync) if options[:verbose]
+      warn(msg)
+      Rails.logger.error(msg) if Rails.logger
     end
   end
+
+  private
+  def self.environment_variables
+    [ENV["RAILS_ENV"], ENV["RACK_ENV"]]
+  end
+
+  def self.was_development?
+    environment_variables.include?(ORIGINAL_RAILS_DEVELOPMENT_ENVIRONMENT)
+  end
+
+  def self.was_default?
+    environment_variables.compact.empty?
+  end
 end
+
+Rails.singleton_class.send(:prepend, RailsEnvLocal::RailsEnv)
