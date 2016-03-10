@@ -2,12 +2,6 @@ require "spec_helper"
 
 describe RailsEnvLocal do
 
-  class EnvironmentParrot
-    def what_it_is?
-      (ENV["RAILS_ENV"] || ENV["RACK_ENV"] || Rails.env).dup
-    end
-  end
-
   before do
     Rails.env = "development"
     ENV["RAILS_ENV"] = nil
@@ -19,17 +13,16 @@ describe RailsEnvLocal do
   end
 
   context "vanilla" do
-    let(:instance) { EnvironmentParrot.new }
     it "is not affected by RailsEnvLocal" do
-      expect(instance.what_it_is?).to eq("development")
+      expect(Rails.env).to eq("development")
     end
-    context "overrides" do
+    context "does not override" do
       context "RAILS_ENV" do
         before do
           ENV["RAILS_ENV"] = "soda"
         end
         it "works" do
-          expect(instance.what_it_is?).to eq("soda")
+          expect(ENV["RAILS_ENV"]).to eq("soda")
         end
       end
       context "RACK_ENV" do
@@ -37,38 +30,36 @@ describe RailsEnvLocal do
           ENV["RACK_ENV"] = "pop"
         end
         it "works" do
-          expect(instance.what_it_is?).to eq("pop")
+          expect(ENV["RACK_ENV"]).to eq("pop")
         end
       end
     end
   end
 
   context "defaults" do
-    let(:instance) { EnvironmentParrot.new }
     before do
       ENV["RAILS_ENV"] = "watermelon"
       ENV["RACK_ENV"] = "papaya"
       RailsEnvLocal.set_local_environment
     end
     it "is affected by RailsEnvLocal" do
-      expect(instance.what_it_is?).to eq("local")
+      expect(Rails.env).to eq("localdev")
     end
     context "overrides" do
       context "RAILS_ENV" do
         it "works" do
-          expect(instance.what_it_is?).to eq("local")
+          expect(ENV["RAILS_ENV"]).to eq("localdev")
         end
       end
       context "RACK_ENV" do
         it "works" do
-          expect(instance.what_it_is?).to eq("local")
+          expect(ENV["RACK_ENV"]).to eq("localdev")
         end
       end
     end
   end
 
   context "options" do
-    let(:instance) { EnvironmentParrot.new }
     before do
       ENV["RAILS_ENV"] = "watermelon"
       ENV["RACK_ENV"] = "papaya"
@@ -78,7 +69,7 @@ describe RailsEnvLocal do
         RailsEnvLocal.set_local_environment(environment: "temperate")
       end
       it "is affected by RailsEnvLocal" do
-        expect(instance.what_it_is?).to eq("temperate")
+        expect(Rails.env).to eq("temperate")
       end
     end
     context "set_rails_env" do

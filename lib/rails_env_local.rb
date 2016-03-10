@@ -18,7 +18,7 @@ require "rails"
 #
 # Options:
 #
-#   environment: a string (default is "local")
+#   environment: a string (default is "localdev")
 #     Effect: will set the Rails environment (Rails.env) to the given string
 #     Example: RailsEnvLocal.set_local_environment(environment: "panda")
 #
@@ -35,9 +35,13 @@ require "rails"
 #     Example: RailsEnvLocal.set_local_environment(set_rails_env: false)
 
 module RailsEnvLocal
-  DEVELOPMENT_ENVIRONMENT = "development"
-  def self.set_local_environment(environment: "local", **options)
-    if ENV["RAILS_ENV"] == DEVELOPMENT_ENVIRONMENT || Rails.env == DEVELOPMENT_ENVIRONMENT
+  ORIGINAL_RAILS_DEVELOPMENT_ENVIRONMENT = "development"
+  # Q: Why not just "local"?
+  # A: It is too generic.  "local" is often used in the same ordinal position as, but with a different meaning than,
+  #     the environment name.  For one example of this see: https://github.com/bkeepers/dotenv#multiple-rails-environments
+  ALTERNATE_RAILS_DEVELOPMENT_ENVIRONMENT = "localdev"
+  def self.set_local_environment(environment: ALTERNATE_RAILS_DEVELOPMENT_ENVIRONMENT, **options)
+    if ENV["RAILS_ENV"] == ORIGINAL_RAILS_DEVELOPMENT_ENVIRONMENT || Rails.env == ORIGINAL_RAILS_DEVELOPMENT_ENVIRONMENT
       Rails.env = environment
       options = {set_rails_env: true, set_rack_env: true, verbose: false}.merge(options)
       ENV["RAILS_ENV"] = Rails.env if options[:set_rails_env]
