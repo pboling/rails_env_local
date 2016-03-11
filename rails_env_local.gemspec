@@ -13,8 +13,8 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{"development" is not always the best name for the local environment}
   spec.description   = <<EODESC
   "development" is not always the best name for the local environment.
-  Sometimes an alternate environment name, like "local", makes sense,
-  and "dev", or "develop" may be used as a deployed environment.
+  An alternate environment name, like "localdev", will prevent confusion,
+  when "dev", or "develop", is used as a deployed environment.
 EODESC
   spec.homepage      = "https://github.com/pboling/rails_env_local"
 
