@@ -55,13 +55,13 @@ NOTE: If you need your custom local environment to be set before some of the oth
 
 ## Compatibility
 
-This gem can should work with any version of Rails that uses `Rails.env`, but it is only tested with Rails 3.2, 4.1, 4.2, and 5.0.
+This gem works with any version of Rails that uses `Rails.env`, *but* it is only tested with Rails 3.2, 4.1, 4.2, and 5.0.
 
 This gem is tested with Ruby 2.2-latest and 2.3-latest.  It should work with any version of Ruby that supports both Ruby 1.9 hashes and double splat arguments.
 
 ## Theory
 
-### Q: Why not just "local"?
+### Q: Why not just "local" as the default?
 
 A: It is too generic.  "local" is often used in the same ordinal position as, but with a different meaning than, the environment name.  For one example of this see: https://github.com/bkeepers/dotenv#multiple-rails-environments
 
