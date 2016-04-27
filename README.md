@@ -30,8 +30,8 @@
 [peterboling]: http://www.peterboling.com
 [coderbits]: https://coderbits.com/pboling
 [coderwall]: http://coderwall.com/pboling
-[documentation]: http://rdoc.info/github/pboling/flag_shih_tzu/frames
-[homepage]: https://github.com/pboling/flag_shih_tzu
+[documentation]: http://rdoc.info/github/pboling/rails_env_local/frames
+[homepage]: https://github.com/pboling/rails_env_local
 
 ## Installation
 
