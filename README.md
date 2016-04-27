@@ -7,20 +7,31 @@
 ... But are you going to write specs for code in your `config/boot.rb` file?  Really?
 
 
-| Project                 |  FlagShihTzu      |
+| Project                 |  RailsEnvLocal    |
 |------------------------ | ----------------- |
-| gem name                |  rails_env_local    |
+| gem name                |  rails_env_local  |
 | license                 |  MIT              |
+| expert support          |  [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github) |
+| download rank               |  [![Total Downloads](https://img.shields.io/gem/rt/rails_env_local.svg)](https://rubygems.org/gems/rails_env_local) |
 | version                 |  [![Gem Version](https://badge.fury.io/rb/rails_env_local.png)](http://badge.fury.io/rb/rails_env_local) |
 | dependencies            |  [![Dependency Status](https://gemnasium.com/pboling/rails_env_local.png)](https://gemnasium.com/pboling/rails_env_local) |
 | code quality            |  [![Code Climate](https://codeclimate.com/github/pboling/rails_env_local.png)](https://codeclimate.com/github/pboling/rails_env_local) |
 | inline documenation     |  [![Inline docs](http://inch-ci.org/github/pboling/rails_env_local.png)](http://inch-ci.org/github/pboling/rails_env_local) |
 | continuous integration  |  [![Build Status](https://secure.travis-ci.org/pboling/rails_env_local.png?branch=master)](https://travis-ci.org/pboling/rails_env_local) |
-| homepage                |  [on github](https://github.com/pboling/rails_env_local) |
-| documentation           |  [on rdoc.info](http://rdoc.info/github/pboling/rails_env_local/frames) |
-| author                  |  [Peter Boling](https://coderbits.com/pboling) |
-| Spread ~♡ⓛⓞⓥⓔ♡~      |  always |
+| test coverage           |  [![Coverage Status](https://coveralls.io/repos/pboling/rails_env_local/badge.png)](https://coveralls.io/r/pboling/rails_env_local) |
+| homepage                |  [on Github.com][homepage] |
+| documentation           |  [on Rdoc.info][documentation] |
+| live chat               |  [![Join the chat at https://gitter.im/pboling/rails_env_local](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pboling/rails_env_local?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) |
+| Spread ~♡ⓛⓞⓥⓔ♡~      |  [on Coderbits][coderbits], [on Coderwall][coderwall] |
 
+[semver]: http://semver.org/
+[pvc]: http://docs.rubygems.org/read/chapter/16#page74
+[railsbling]: http://www.railsbling.com
+[peterboling]: http://www.peterboling.com
+[coderbits]: https://coderbits.com/pboling
+[coderwall]: http://coderwall.com/pboling
+[documentation]: http://rdoc.info/github/pboling/flag_shih_tzu/frames
+[homepage]: https://github.com/pboling/flag_shih_tzu
 
 ## Installation
 
