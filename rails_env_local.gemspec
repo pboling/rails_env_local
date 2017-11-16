@@ -25,7 +25,7 @@ EODESC
 
   spec.add_development_dependency "rails"
   spec.add_development_dependency "bundler", "~> 1.11"
-  spec.add_development_dependency "rake", "~> 10.5"
+  spec.add_development_dependency "rake", "~> 12.3"
   spec.add_development_dependency "rspec", "~> 3.4"
   spec.add_development_dependency "appraisal", "~> 2.1"
   spec.add_development_dependency "wwtd", "~> 1.3"
