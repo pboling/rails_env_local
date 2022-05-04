@@ -1,4 +1,4 @@
-# Every effort should be made to void needing to use this library.
+# Every effort should be made to avoid needing to use this library.
 
 Stick to the defaultRails envs, and if you have deployed envs whose names conflict badly with Rails' defaults, rename those to something else!
 
