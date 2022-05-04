@@ -1,6 +1,6 @@
 # Every effort should be made to avoid needing to use this library.
 
-Stick to the defaultRails envs, and if you have deployed envs whose names conflict badly with Rails' defaults, rename those to something else!
+Stick to the default Rails envs, and if you have deployed envs whose names conflict badly with Rails' defaults, rename those to something else!
 
 # RailsEnvLocal
 
