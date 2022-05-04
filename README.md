@@ -1,3 +1,7 @@
+# Every effort should be made to void needing to use this library.
+
+Stick to the defaultRails envs, and if you have deployed envs whose names conflict badly with Rails' defaults, rename those to something else!
+
 # RailsEnvLocal
 
 `rails_env_local`, where a rails environment for local development can be anything it desires.  Even a `butterfly`.  Tell your DevOps friends.
