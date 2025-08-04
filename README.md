@@ -18,7 +18,6 @@ Stick to the default Rails envs, and if you have deployed envs whose names confl
 | expert support          |  [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github) |
 | download rank               |  [![Total Downloads](https://img.shields.io/gem/rt/rails_env_local.svg)](https://rubygems.org/gems/rails_env_local) |
 | version                 |  [![Gem Version](https://badge.fury.io/rb/rails_env_local.png)](http://badge.fury.io/rb/rails_env_local) |
-| test coverage           |  [![Coverage Status](https://coveralls.io/repos/pboling/rails_env_local/badge.png)](https://coveralls.io/r/pboling/rails_env_local) |
 | homepage                |  [on Github.com][homepage] |
 | documentation           |  [on Rdoc.info][documentation] |
 | live chat               |  [![Join the chat at https://gitter.im/pboling/rails_env_local](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pboling/rails_env_local?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) |
